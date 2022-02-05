@@ -1,0 +1,22 @@
+
+body{
+    background-color: aqua;
+    }
+
+
+
+#dog_image{
+align-items: center;
+justify-content: center;
+display:flex;
+background-color: beige;
+width: 400px;
+height: 600px;
+
+
+}
+#dog_image > img{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+}
