@@ -38,6 +38,7 @@ btn.addEventListener("click", async () => {
 
         return data;
     }
+
 })
 
 
@@ -94,9 +95,17 @@ btn.addEventListener("click", async () => {
 })
 
 
+//Getting a random dog image when submit button is pressed.
 
 
+btn.addEventListener("click", function getImage() {
 
+    fetch('https://dog.ceo/api/breeds/image/random')
+        .then(res => res.json())
+        .then(data => {
+            dog_image.innerHTML = `<img src="${data.message}"/>`
+        })
+})
 
 
 
