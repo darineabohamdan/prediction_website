@@ -42,6 +42,34 @@ btn.addEventListener("click", async () => {
 
 
 
+//get gender
+
+
+btn.addEventListener("click", async () => {
+
+    const input = document.querySelector("input").value;
+    const data = await fetchApi(input);
+
+    document.querySelector("#gender").innerHTML = data.gender;
+    console.log(data);
+
+
+    async function fetchApi(name) {
+        const url = "https://api.genderize.io?name=" + name;
+        const dataFetch = await fetch(url, {
+            method: "GET",
+            headers: {
+                accept: "application/json",
+            },
+        })
+        const data = await dataFetch.json();
+
+        return data;
+    }
+})
+
+
+
 
 
 
