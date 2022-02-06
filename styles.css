@@ -1,6 +1,9 @@
 
 body{
-    background-color: aqua;
+    background-image:url("image/MakingPredictions.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
     }
 
 
@@ -10,13 +13,64 @@ align-items: center;
 justify-content: center;
 display:flex;
 background-color: beige;
-width: 400px;
-height: 600px;
+width: 300px;
+height: 500px;
+
+    margin-left: 75%;
 
 
 }
+
 #dog_image > img{
     object-fit:cover;
     width: 100%;
-    height: 100%;
+    height: 100%;   
+}
+.dogPrediction{
+margin-left: 70%;
+margin-top: -30%;
+}
+
+p{
+    font-weight: bolder;
+    font-size: 25px;
+}
+ form{
+margin-top: 20%;
+font-weight: bolder;
+font-size: 30px;
+
+    
+ }
+ div{
+     display: flex;
+     flex-direction: row;
+ }
+ button{
+     border-radius: 25%;
+     width: 20%;
+     background: orange;
+ }
+
+ @media (max-width: 800px) {
+    .dogPrediction{
+        margin-left: 0%;
+        margin-top: 0%;
+        }
+            
+        
+#dog_image{
+    margin-left: 0%;
+}
+ 
+body{
+    background-image:url("image/MakingPredictions.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    
+    }
+form{
+    margin-top: 50%;
+}
+
 }
