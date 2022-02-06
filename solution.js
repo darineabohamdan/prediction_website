@@ -68,6 +68,30 @@ btn.addEventListener("click", async () => {
     }
 })
 
+// get nationaloty:
+
+btn.addEventListener("click", async () => {
+
+    const input = document.querySelector("input").value;
+    const data = await fetchApi(input);
+
+
+    document.querySelector("#country").innerHTML = data.country[0].country_id + " " + data.country[1].country_id;
+    console.log(data);
+
+    async function fetchApi(name) {
+        const url = "https://api.nationalize.io/?name=" + name;
+        const dataFetch = await fetch(url, {
+            method: "GET",
+            headers: {
+                accept: "application/json",
+            },
+        })
+        const data = await dataFetch.json();
+
+        return data;
+    }
+})
 
 
 
